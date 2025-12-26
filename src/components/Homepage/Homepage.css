@@ -1,0 +1,50 @@
+.swiggy-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.homepage-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.homepage-header img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.homepage-header a {
+    text-decoration: underline;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+}
+.homepage-header a:hover {
+    color: orange;
+    cursor: pointer;
+}
+.swiggy-header ul{
+    display: flex;
+    gap: 5rem;
+    padding-right: 30px;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+.swiggy-header li{
+    list-style: none;   
+    cursor: pointer;
+}
+.swiggy-header a{
+    text-decoration: none;
+    color: black;
+}
+.swiggy-header a:hover{
+    color: orange;
+}
+@media (max-width:768px) {
+    
+}
