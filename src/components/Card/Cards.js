@@ -1,17 +1,22 @@
 import React from 'react'
 import './Cards.css';
-import { Image } from '@chakra-ui/react';
+import {  Image } from '@chakra-ui/react';
 import { Box, HStack, Icon, Text } from '@chakra-ui/react';
 import { HiStar } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cards(props) {
+
+    const navigate = useNavigate();
+    
     return (
-        <div >
+        <div>
             <Text fontSize="xl" fontWeight="bold" mb="2">
                 {props.heading}
             </Text>
+        
            <HStack gap="10" wrap="wrap"> {props.data.map((item,index)=>(
-            <Box maxW="260px" h="180px" borderWidth="none" m="2" position="relative"  cursor="pointer" key={index}>
+            <Box maxW="260px" h="180px" borderWidth="none" m="2" position="relative"  cursor="pointer" key={index}  onClick={() => navigate("/sweetindia")}>
                 <Image
                     src={item.image}
                     alt="sweets"
@@ -38,6 +43,7 @@ export default function Cards(props) {
                 </Box>
             </Box>))}
             </HStack>
+           
         </div >
     )
 }
