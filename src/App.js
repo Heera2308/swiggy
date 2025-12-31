@@ -7,7 +7,7 @@ export default function App() {
   
   const loc = "Home";
   const list = [
-    "Swiggy Corporate",
+    "Zomato",
     "Search",
     "Offers",
     "Help",
