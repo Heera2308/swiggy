@@ -1,5 +1,6 @@
 import React from 'react'
 import './Homepage.css';
+import { Link } from 'react-router-dom';
 
 export default function Homepage(props) {
     return (
@@ -9,7 +10,7 @@ export default function Homepage(props) {
                 <a href="/">{props.loc}</a>
             </nav>
             <ul>{props.list.map((item,i)=>(
-                <li key={i} ><a href="/offers">{item}</a></li>
+                <li key={i} ><Link to="/offers">{item}</Link></li>
             ))}
             </ul>
         </div>

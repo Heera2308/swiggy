@@ -1,58 +1,69 @@
 import React from 'react'
 import { Box, HStack, Icon, Text, VStack } from '@chakra-ui/react';
 import { HiStar } from 'react-icons/hi';
-// import './Sweetindia.css'
-export default function Sweetindia(props) {
+import { useParams } from 'react-router-dom';
+
+
+export default function Sweetindia({data,data1}) {
+  const { id } =useParams();
+  const restaurant = data.find(r=>r.id===id)
   return (
+
     <div>
 
       <Text fontSize="2xl" fontWeight="bold" mb="4">
-        {props.heads}
+        {restaurant.restaurantName}
       </Text>
 
       <Box bg="white"
         borderRadius="2xl"
         p="6"
-        boxShadow="2xl">
+        boxShadow="2xl" mb="10">
         <VStack align="start" spacing="3">
           <HStack spacing="4">
             <Icon color="green">
               <HiStar />
             </Icon>
             <Text fontWeight="bold">
-              {props.rating}({props.number}ratings) . {props.price}
+              {restaurant.rating}({restaurant.number} ratings) . {restaurant.price}
             </Text>
           </HStack>
           <Text color="orange.500" fontWeight="semibold" >
-            {props.description},{props.itemname}
+            {restaurant.description}
           </Text>
           <Text>
-            {props.way}
+           {restaurant.location}
           </Text>
-          <Text>
-            {props.time}
+          <Text fontWeight="bold">
+            {restaurant.Timing}
           </Text>
         </VStack>
       </Box>
 
-  <Text fontSize="2xl" fontWeight="bold" mb="4">
-        {props.heads1}
+      <Text fontSize="2xl" fontWeight="bold" mb="4" >
+        Deals for you
       </Text>
 
-      <Box bg="white" p="4">
-        <HStack>
-          <Text>
-            {props.offers}
-          </Text>
-           <Text>
-            {props.Coupon}
-          </Text>
-        </HStack>
+      <HStack spacing="4" wrap="wrap">
+        {restaurant.data1.map((item, i) => (
 
-      </Box>
-
-
-
+          <Box bg="white" p="4" m="3" key={i} w="250px" borderRadius="20px"
+            border="3px solid"
+            borderColor="gray.200"
+            cursor="pointer">
+              
+            <VStack align="left">
+              <Text fontWeight="bold" fontSize="lg" >
+                {item.offers}
+              </Text>
+              <Text color="grey"
+                fontWeight="bold">
+                {item.coupon}
+              </Text>
+            </VStack>
+          </Box>
+        ))}
+      </HStack>
 
     </div>
   )
