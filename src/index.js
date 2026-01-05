@@ -172,6 +172,24 @@ const data = [{
     coupon: "USE SBIDC100",
   },]
 },
+{
+  id: "The-garden-Inn",
+  image: "/Image/ch.avif",
+  restaurantName: "The garden Inn",
+  number: "108",
+  location: "Outlet,Chaibasa",
+  description: "Chinese food",
+  price: " 300 for two",
+  rating: "4.3",
+  Timing: "25-30 mins",
+  title: "North Indian,Briyani,Chinese Chai_basa",
+  data1: [
+  {
+    offers: "10% off Upto 100",
+    coupon: "USE SBIDC100",
+  },]
+},
+
 ]
 
 const router = createBrowserRouter([
