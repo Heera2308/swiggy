@@ -7,6 +7,11 @@ import { Provider } from './components/ui/provider';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Sweetindia from './components/sweetindia/Sweetindia';
 import Cards from './components/Card/RestaurantList';
+import Search from './components/List/Search';
+import SwiggyCorporate from './components/List/SwiggyCorporate';
+import Offers from './components/List/Offers';
+import Help from './components/List/Help';
+import Signin from './components/List/Signin';
 
 
 const heading = "Top restaurant chains in Chaibasa";
@@ -189,8 +194,41 @@ const data = [{
     coupon: "USE SBIDC100",
   },]
 },
-
 ]
+// --------------------------------------
+const image1="/Image/swiggy-logo.webp";
+const heading1="About Us";
+const description1="Swiggy is a new-age consumer-first organization offering an easy-to-use convenience platform, accessible through a unified app.";
+const navItems=[{
+  label:"About Swiggy",
+  path:"/aboutswiggy"
+},{
+  label:"Our Business",
+  path:"/Ourbusiness"
+},{
+  label:"Delivering For Everyone",
+  path:"/deliveringforeveryone"
+},{
+  label:"News Room",
+  path:"/newsroom"
+},{
+  label:"Investor Realtions",
+  path:"/investorrealtions"
+},{
+  label:"Sustainability",
+  path:"/sustainability"
+},{
+  label:"Contact Us",
+  path:"/contactus"
+},]
+// ----------------------------------------
+const logoSrc="/Image/swiggy-logo.webp";
+const location="Setup Your precise location";
+const bannerImage="/Image/DO_collectionBanner.png";
+const bannerText="Restaurants With Great Offers Near Me";
+// -----------------------------------------------------------
+const title="Help & Support";
+const description="Let's take a step ahead and help you better."
 
 const router = createBrowserRouter([
   {
@@ -202,11 +240,38 @@ const router = createBrowserRouter([
         element: <Cards heading={heading} data={data} />
       },
       {
+        path:"search",
+        element:<Search/>
+      },
+      {
+        path:"help",
+        element:<Help title={title}
+        description={description}
+        />
+      },
+      {
         path: "/restaurant/:id",
         element:
           <Sweetindia data={data}
           />
       }]
+  },{
+    path:"/swiggycorporate",
+    element:<SwiggyCorporate navItems={navItems} 
+    image1={image1}
+    heading1={heading1}
+    description1={description1}/>
+  },
+  {
+    path:"/offers",
+    element:<Offers  
+    logoSrc={logoSrc}
+    location={location}
+    bannerImage={bannerImage}
+    bannerText={bannerText}/>
+  },{
+    path:"/signin",
+    element:<Signin/>
   }
 ]);
 

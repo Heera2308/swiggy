@@ -6,13 +6,24 @@ import { Outlet } from 'react-router-dom';
 export default function App() {
   
   const loc = "Home";
-  const list = [
-    "Zomato",
-    "Search",
-    "Offers",
-    "Help",
-    "Sign In",
-    "Cart"
+  const list = [{
+    label:"Swiggy Corporate",
+    path:"/swiggycorporate"
+  },
+    {
+    label:"Search",
+    path:"/search"
+  },
+  {
+    label:"Offers",
+    path:"/offers"
+  },{
+    label:"Help",
+    path:"/help"
+  },{
+    label:"Sign In",
+    path:"/signIn"
+  },
   ];
   // ----------------------------------------
 

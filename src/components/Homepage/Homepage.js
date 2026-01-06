@@ -10,7 +10,7 @@ export default function Homepage(props) {
                 <a href="/">{props.loc}</a>
             </nav>
             <ul>{props.list.map((item,i)=>(
-                <li key={i} ><Link to="/offers">{item}</Link></li>
+                <li key={i} ><Link to={item.path}>{item.label}</Link></li>
             ))}
             </ul>
         </div>

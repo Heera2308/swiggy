@@ -1,0 +1,32 @@
+.swiggy-corporate-nav{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inside-Nav{
+    display: flex;
+    gap: 20px;
+}
+.inside-Nav li{
+    font-size: larger;
+    font-weight: 500;
+}
+.inside-Nav li:hover{
+    color: orange;
+    cursor: pointer;
+}
+.head-para{
+    margin: 50px;
+    text-align: center;
+}
+.head-para h2{
+    font-size: xx-large;
+    font-weight: 700;
+}
+.head-para p{
+    font-size: large;
+    color: grey;
+    font-family: sans-serif;
+}
