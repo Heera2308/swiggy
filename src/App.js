@@ -8,7 +8,7 @@ export default function App() {
   const loc = "Home";
   const navLinks = [{
     label:"Swiggy Corporate",
-    path:"/swiggycorporate"
+    path:"/swiggy-corporate"
   },
     {
     label:"Search",

@@ -201,25 +201,25 @@ const heading1="About Us";
 const description1="Swiggy is a new-age consumer-first organization offering an easy-to-use convenience platform, accessible through a unified app.";
 const navItems=[{
   label:"About Swiggy",
-  path:"/aboutswiggy"
+  path:"/about-swiggy"
 },{
   label:"Our Business",
-  path:"/Ourbusiness"
+  path:"/ourbusiness"
 },{
   label:"Delivering For Everyone",
-  path:"/deliveringforeveryone"
+  path:"/delivering-for-everyone"
 },{
   label:"News Room",
-  path:"/newsroom"
+  path:"/news-room"
 },{
   label:"Investor Realtions",
-  path:"/investorrealtions"
+  path:"/investor-realtions"
 },{
   label:"Sustainability",
   path:"/sustainability"
 },{
   label:"Contact Us",
-  path:"/contactus"
+  path:"/contact-us"
 },]
 // ----------------------------------------
 const logoSrc="/Image/swiggy-logo.webp";
@@ -256,7 +256,7 @@ const router = createBrowserRouter([
           />
       }]
   },{
-    path:"/swiggycorporate",
+    path:"/swiggy-corporate",
     element:<SwiggyCorporate navItems={navItems} 
     image1={image1}
     heading1={heading1}
