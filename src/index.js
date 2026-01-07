@@ -270,7 +270,7 @@ const router = createBrowserRouter([
     bannerImage={bannerImage}
     bannerText={bannerText}/>
   },{
-    path:"/signin",
+    path:"/sign-in",
     element:<Signin/>
   }
 ]);

@@ -5,15 +5,15 @@
     justify-content: space-between;
     align-items: center;
 }
-.inside-Nav{
+.inside-nav{
     display: flex;
     gap: 20px;
 }
-.inside-Nav li{
+.inside-nav li{
     font-size: larger;
     font-weight: 500;
 }
-.inside-Nav li:hover{
+.inside-nav li:hover{
     color: orange;
     cursor: pointer;
 }

@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 export default function App() {
   
   const loc = "Home";
-  const list = [{
+  const navLinks = [{
     label:"Swiggy Corporate",
     path:"/swiggycorporate"
   },
@@ -22,7 +22,7 @@ export default function App() {
     path:"/help"
   },{
     label:"Sign In",
-    path:"/signIn"
+    path:"/sign-in"
   },
   ];
   // ----------------------------------------
@@ -34,7 +34,7 @@ export default function App() {
         <Homepage
           image={logo}
           loc={loc}
-          list={list} />
+          navLinks={navLinks} />
 
           <Outlet/>
       </div>

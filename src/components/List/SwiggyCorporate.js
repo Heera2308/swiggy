@@ -1,24 +1,23 @@
 import { Image } from '@chakra-ui/react'
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './swiggycorporate.css';
+import './SwiggyCorporate.css';
 
-export default function SwiggyCorporate(props) {
+export default function SwiggyCorporate({image1,navItems,heading,description}) {
   return (
     <div >
       <div className="swiggy-corporate-nav">
-        <Image src={props.image1} alt="swiggy logo" height="50px" />
-        <ul className="inside-Nav">
-          {props.navItems.map((item, index) => (
+        <Image src={image1} alt="swiggy logo" height="50px" />
+        <ul className="inside-nav">
+          {navItems.map((item, index) => (
             <li key={index}><Link to={item.path}>{item.label}</Link>
             </li>))}
         </ul>
       </div>
       <div className="head-para">
-        <h2>{props.heading}</h2>
-       <p>{props.description}</p>
+        <h2>{heading}</h2>
+        <p>{description}</p>
       </div>
-      
     </div>
   )
 }
