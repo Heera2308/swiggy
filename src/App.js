@@ -6,13 +6,24 @@ import { Outlet } from 'react-router-dom';
 export default function App() {
   
   const loc = "Home";
-  const list = [
-    "Zomato",
-    "Search",
-    "Offers",
-    "Help",
-    "Sign In",
-    "Cart"
+  const navLinks = [{
+    label:"Swiggy Corporate",
+    path:"/swiggy-corporate"
+  },
+    {
+    label:"Search",
+    path:"/search"
+  },
+  {
+    label:"Offers",
+    path:"/offers"
+  },{
+    label:"Help",
+    path:"/help"
+  },{
+    label:"Sign In",
+    path:"/sign-in"
+  },
   ];
   // ----------------------------------------
 
@@ -23,7 +34,7 @@ export default function App() {
         <Homepage
           image={logo}
           loc={loc}
-          list={list} />
+          navLinks={navLinks} />
 
           <Outlet/>
       </div>

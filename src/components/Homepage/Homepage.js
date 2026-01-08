@@ -9,8 +9,8 @@ export default function Homepage(props) {
                 <img src={props.image} alt="Swiggy company logo" />
                 <a href="/">{props.loc}</a>
             </nav>
-            <ul>{props.list.map((item,i)=>(
-                <li key={i} ><Link to="/offers">{item}</Link></li>
+            <ul>{props.navLinks.map((item,i)=>(
+                <li key={i} ><Link to={item.path}>{item.label}</Link></li>
             ))}
             </ul>
         </div>
