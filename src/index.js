@@ -7,11 +7,11 @@ import { Provider } from './components/ui/provider';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Sweetindia from './components/sweetindia/Sweetindia';
 import Cards from './components/Card/RestaurantList';
-import Search from './components/List/Search';
-import SwiggyCorporate from './components/List/SwiggyCorporate';
-import Offers from './components/List/Offers';
-import Help from './components/List/Help';
-import Signin from './components/List/Signin';
+import Search from './components/Search/Search';
+import SwiggyCorporate from './components/SwiggyCorporate/SwiggyCorporate';
+import Offers from './components/Offers/Offers';
+import Help from './components/Help/Help';
+import Signin from './components/Signin/Signin';
 
 
 const heading = "Top restaurant chains in Chaibasa";
