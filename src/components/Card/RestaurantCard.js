@@ -4,7 +4,6 @@ import { Box, HStack, Icon, Text } from '@chakra-ui/react';
 import { HiStar } from 'react-icons/hi';
 export default function RestaurantCard({ item, onClick }) {
     return (
-       
             <Box minW="260px"
                 maxW="260px" borderWidth="none" position="relative" cursor="pointer" flexShrink={0} onClick={onClick}>
                 <Image
