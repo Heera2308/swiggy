@@ -1,14 +1,10 @@
 import React, { useRef } from 'react'
-import { Flex, Text, IconButton,HStack } from '@chakra-ui/react';
+import { Flex, Text, IconButton,HStack} from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import RestaurantCard from './RestaurantCard';
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-
-
-
 export default function RestaurantList({ heading, data })
  {
-
     const navigate = useNavigate();
     const scrollRef = useRef(null);//creates a reference
 
@@ -20,7 +16,7 @@ export default function RestaurantList({ heading, data })
         scrollRef.current.scrollLeft -= 300;
     };
 
-    return (
+    return ( 
         <div>
             <Flex justifyContent="space-between" mb="4">
             <Text fontSize="xl" fontWeight="bold" mb="4">
@@ -52,6 +48,7 @@ export default function RestaurantList({ heading, data })
                         <RestaurantCard key={item.id} item={item} onClick={() => navigate(`/restaurant/${item.id}`)} />
                     ))}
                 </Flex>
+                
 
         </div>
     )

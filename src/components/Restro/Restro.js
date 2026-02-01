@@ -1,12 +1,17 @@
-import React from 'react'
 import { Box, HStack, Icon, Text, VStack } from '@chakra-ui/react';
 import { HiStar } from 'react-icons/hi';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
+import Menu from '../Menu/Menu';
 
+export default function Restro({data,data1}) {
+ const { addToCart, cartItems ,removeFromCart} = useOutletContext();
 
-export default function Sweetindia({data,data1}) {
   const { id } =useParams();
-  const restaurant = data.find(r=>r.id===id)
+  const restaurant = data.find(r=>r.id===id);
+  
+  
+if (!restaurant) return <Text>Loading...</Text>;
+
   return (
 
     <div>
@@ -64,7 +69,12 @@ export default function Sweetindia({data,data1}) {
           </Box>
         ))}
       </HStack>
-
+      <Menu dishes={restaurant.dishes}
+       menubutton1={restaurant.menubutton1}
+  menubutton2={restaurant.menubutton2}
+  addToCart={addToCart}
+  cartItems={cartItems}
+  removeFromCart={removeFromCart}/>
     </div>
   )
 }
